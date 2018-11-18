@@ -22,8 +22,8 @@ protected:
 	virtual void BeginPlay() override;
 
 	UFUNCTION(BlueprintCallable)
-	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
-
+	void SetBarrelReference(UTankBarrel* BarrelToSet);
+	
 private:	
 	// Sets default values for this pawn's properties
 	ATank();
@@ -33,5 +33,8 @@ private:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(EditAnywhere)
+	float ProjectileLaunchSpeed = 100000;	// At 1000 m/s
 
 };

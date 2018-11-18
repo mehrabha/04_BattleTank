@@ -42,6 +42,6 @@ void ATankAIController::AimTowardsPlayer() {
 	auto PlayerLocation = GetPlayerTank()->GetActorLocation();
 
 	if (AITank) {
-		AITank->AimAtLocation(PlayerLocation);
+		//AITank->AimAtLocation(PlayerLocation);
 	}
 }

@@ -31,7 +31,7 @@ private:
 	int32 LineTraceRange = 1000000;
 
 	// Tank moves barrel towards crosshair
-	void AimTowardsCrosshair();
+	void AimTowardsCrosshair   ();
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 
 	bool GetLookDirection(FVector2D ScreenLocation, FVector & LookDirection) const;

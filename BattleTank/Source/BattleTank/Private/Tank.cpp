@@ -11,7 +11,7 @@ ATank::ATank() {
 	AimingComponent = CreateDefaultSubobject<UTankAimingComponent>(FName("Aiming Component"));
 }
 
-void ATank::SetBarrelReference(UStaticMeshComponent* BarrelToSet) {
+void ATank::SetBarrelReference(UTankBarrel* BarrelToSet) {
 	AimingComponent->SetBarrelReference(BarrelToSet);
 }
 
@@ -22,7 +22,7 @@ void ATank::BeginPlay(){
 
 void ATank::AimAtLocation(FVector WorldLocation) {
 	if (AimingComponent) {
-		AimingComponent->AimAtLocation(WorldLocation);
+		AimingComponent->AimAtLocation(WorldLocation, ProjectileLaunchSpeed);
 	}
 }
 
